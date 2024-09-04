@@ -13,3 +13,11 @@ variable "jwt_secret" {
 variable "cookie_secret" {
   type = string
 }
+
+variable "vpc_id" {
+  type = string
+}
+
+variable "subnets" {
+  default = ["subnet-09b7ac788acb0996b"]
+}

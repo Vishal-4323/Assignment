@@ -28,3 +28,19 @@ module "aws_ecs_task_definition" {
   COOKIE_SECRET = var.cookie_secret
 }
 
+module "aws_security_group" {
+  source = "./modules/aws_security_group"
+  vpc_id = var.vpc_id
+}
+
+module "aws_ecs_service" {
+  source = "./modules/aws_ecs_service"
+  name = "medusa-service"
+  cluster = module.aws_ecs_cluster.id
+  task_definition = module.aws_ecs_task_definition.arn
+  desired_count = 1
+  launch_type = "FARGATE"
+  subnets = var.subnets
+  security_groups = [module.aws_security_group.id]
+  assign_public_ip = true
+}

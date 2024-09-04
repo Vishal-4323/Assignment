@@ -2,20 +2,16 @@ variable "image" {
   type = string
 }
 
-variable "db_url" {
-  type = string
-}
-
 variable "jwt_secret" {
-  type = string
+  default = ""
 }
 
 variable "cookie_secret" {
-  type = string
+  default = ""
 }
 
 variable "vpc_id" {
-  type = string
+  default = ["vpc-04cf878b56e1792b0"]
 }
 
 variable "subnets" {

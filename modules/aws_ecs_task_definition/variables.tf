@@ -23,21 +23,13 @@ variable "name" {
 }
 
 variable "image" {
-  type = string
+  default = "stephaneklein/medusa-backend"
 }
 
 variable "essential" {
   default = true
 }
 
-variable "DATABASE_URL" {
-  type = string
-}
-
-variable "JWT_SECRET" {
-  type = string
-}
-
-variable "COOKIE_SECRET" {
-  type = string
+variable "db_url" {
+  default = "database-1.ctmcai20g9uv.ap-south-1.rds.amazonaws.com"
 }

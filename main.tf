@@ -23,9 +23,6 @@ module "aws_ecs_task_definition" {
   family = "medusa-task"
   image = var.image
   essential = true
-  DATABASE_URL = var.db_url
-  JWT_SECRET = var.jwt_secret
-  COOKIE_SECRET = var.cookie_secret
 }
 
 module "aws_security_group" {

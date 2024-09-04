@@ -15,15 +15,15 @@ resource "aws_ecs_task_definition" "medusa_task" {
       },
       {
         name  = "DATABASE_URL"
-        value = var.DATABASE_URL
+        value = var.db_url
       },
       {
         name  = "JWT_SECRET"
-        value = var.JWT_SECRET
+        value = "var.JWT_SECRET"
       },
       {
         name  = "COOKIE_SECRET"
-        value = var.COOKIE_SECRET
+        value = "var.COOKIE_SECRET"
       },
       {
         name  = "NODE_ENV"

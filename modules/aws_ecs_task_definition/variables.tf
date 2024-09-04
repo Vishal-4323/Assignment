@@ -23,7 +23,7 @@ variable "name" {
 }
 
 variable "image" {
-  default = "stephaneklein/medusa-backend"
+  default = ""
 }
 
 variable "essential" {
@@ -31,5 +31,5 @@ variable "essential" {
 }
 
 variable "db_url" {
-  default = "database-1.ctmcai20g9uv.ap-south-1.rds.amazonaws.com"
+  default = ""
 }

@@ -1,5 +1,5 @@
 variable "image" {
-  default = ""
+  default = "vishal4323/python-sample-app:v1"
 }
 
 variable "vpc_id" {

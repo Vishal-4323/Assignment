@@ -29,7 +29,3 @@ variable "image" {
 variable "essential" {
   default = true
 }
-
-variable "db_url" {
-  default = ""
-}

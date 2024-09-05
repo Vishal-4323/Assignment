@@ -8,35 +8,9 @@ resource "aws_ecs_task_definition" "medusa_task" {
     name = var.name
     image = var.image
     essential = var.essential
-    environment = [
-      {
-        name  = "DATABASE_TYPE"
-        value = "postgres"
-      },
-      {
-        name  = "DATABASE_URL"
-        value = var.db_url
-      },
-      {
-        name  = "JWT_SECRET"
-        value = "var.JWT_SECRET"
-      },
-      {
-        name  = "COOKIE_SECRET"
-        value = "var.COOKIE_SECRET"
-      },
-      {
-        name  = "NODE_ENV"
-        value = "production"
-      },
-      {
-        name  = "NPM_CONFIG_PRODUCTION"
-        value = "false"
-      }
-    ]
     portMappings = [{
-      containerPort = 9000
-      hostPort      = 9000
+      containerPort = 8000
+      hostPort      = 8000
       protocol      = "tcp"
     }]
   }])
